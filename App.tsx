@@ -39,16 +39,19 @@ const App = () => {
       <Stack.Navigator
         initialRouteName="Login"
         screenOptions={{
-          headerTintColor: COLORS.lightGray,
+          headerTintColor: COLORS.black,
           headerTitleStyle: {
-            ...FONTS.navTitle,
+            ...FONTS.h2,
+          },
+          headerStyle: {
+            backgroundColor: COLORS.primary,
           },
           headerLeft: ({ onPress }) => (
             <TouchableOpacity
               style={{ marginLeft: SIZES.padding }}
               onPress={onPress}
             >
-              <FontAwesome name="chevron-left" size={24} color="black" />
+              <FontAwesome name="chevron-left" size={22} color="black" />
             </TouchableOpacity>
           ),
         }}
@@ -64,13 +67,13 @@ const App = () => {
           name="Home"
           component={Home}
           options={({ navigation }) => ({
-            title: "SHOE SELECTOR",
+            title: "PIZZA DELICACY",
             headerRight: () => (
               <TouchableOpacity
                 style={{ marginRight: SIZES.padding }}
                 onPress={() => navigation.navigate("Cart")}
               >
-                <FontAwesome name="shopping-cart" size={24} color="black" />
+                <FontAwesome name="shopping-cart" size={22} color="black" />
               </TouchableOpacity>
             ),
           })}

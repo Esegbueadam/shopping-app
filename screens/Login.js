@@ -60,7 +60,7 @@ export default function Login({ navigation }) {
   });
 
   return (
-    <View style={{ flex: 1, backgroundColor: "#ffd684" }}>
+    <View style={{ flex: 1, backgroundColor: COLORS.primary }}>
       <StatusBar barStyle="dark-content" />
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
         <Animated.Image
@@ -86,7 +86,7 @@ export default function Login({ navigation }) {
           },
         ]}
       >
-        <Text style={{ ...FONTS.h1 }}>Adam's Pizza Zone</Text>
+        <Text style={{ ...FONTS.h1, color: COLORS.secondary }}>Adam's Pizza Zone</Text>
         <View style={{ marginVertical: 40 }}>
           <View style={{ marginVertical: 5 }}>
             <Text style={styles.inputLabel}>Email</Text>
@@ -145,6 +145,15 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 20,
     padding: 20,
     paddingTop: 40,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 7,
+    },
+    shadowOpacity: 0.43,
+    shadowRadius: 9.51,
+
+    elevation: 15,
   },
   input: {
     marginVertical: 10,
@@ -162,7 +171,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   button: {
-    backgroundColor: COLORS.black,
+    backgroundColor: COLORS.primary,
     marginVertical: 10,
     height: 60,
     borderRadius: 30,
@@ -180,5 +189,6 @@ const styles = StyleSheet.create({
   buttonText: {
     fontFamily: "CocoGothic-Bold",
     fontSize: 20,
+    color: COLORS.secondary,
   },
 });
