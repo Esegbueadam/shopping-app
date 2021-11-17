@@ -92,7 +92,7 @@ export default function Login({ navigation }) {
             <Text style={styles.inputLabel}>Email</Text>
             <TextInput
               style={styles.input}
-              placeholder="Your email id"
+              placeholder="Your email id"   
               placeholderTextColor={COLORS.gray}
             />
           </View>
